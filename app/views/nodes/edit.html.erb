@@ -1,0 +1,33 @@
+<% provide(:title, @node.name) %>
+
+<ul id="tabbers">
+<% Node.roots.each do |node| %>
+	<li> <%= link_to node.name, node, class: ("active" if @node.root == node) %></li>
+	<% end %>
+
+	<div id="submenu">
+	<%= render 'layouts/submenu_nodes', nodes: @node.root.descendants.arrange  %>
+    </div>
+
+</ul>
+
+
+<div class="span3">
+</div>
+
+	<div class="span8">
+	<h2>Editing node</h2>
+
+	<div id="breadcrumbs">
+	<% @node.ancestors.each do |node| %>
+		<%= link_to node.name, node %> &gt;
+	<% end %>
+	</div>
+
+	<%= render 'form' %>
+
+	<%= link_to 'Show', @node, :class => 'btn btn-primary btn-small' %>
+	<%= link_to 'Back', nodes_path, :class => 'btn btn-primary btn-small' %>
+	</div>
+
+

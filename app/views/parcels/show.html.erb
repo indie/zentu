@@ -1,0 +1,88 @@
+ <p id="notice"><%= notice %></p>
+
+
+<h2>Ecosteader Network</h2>
+
+<% if !signed_in? %>
+
+<div class="paragraph">
+So sorry! You must be signed in to view more parcel details.</div>
+
+  <%= link_to 'Back to Browsing', parcels_path, class: 'btn btn-primary' %>
+  or 
+  <%= link_to 'Join Ecosteader', signin_path, class: 'btn btn-primary', title: 'it is free' %>
+
+
+<% else %>
+
+ <p>
+  <b>Name:</b>
+  <%= @parcel.name %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%= @parcel.state %>
+</p>
+
+<p>
+  <b>Parcel Details / Contact Info:</b>
+  <%= markdown(@parcel.parcel_details) %>
+</p>
+
+<p>
+  <b>Acreage:</b>
+  <%= @parcel.acreage %>
+</p>
+
+<p>
+  <b>Map URL:</b>
+    <%= link_to 'map', (@parcel.maplink) %>
+</p>
+
+<p>
+  <b>Zoning:</b>
+  <%= @parcel.zoning %>
+</p>
+
+<p>
+  <b>Deed:</b>
+  <%= @parcel.deed %>
+</p>
+
+<p>
+  <b>Attachments:</b>
+  <% @parcel.attachments.split(",").each do |pic| %>
+    <img src="<%= pic %>">
+  <% end %>
+</p>
+
+ <p>
+   <b>APN:</b>
+   <%= @parcel.apn %>
+ </p>
+
+<p>
+  <b>Legal Description:</b>
+  <%= @parcel.legal_desc %>
+</p>
+
+<!-- <p>
+  <b>POA?:</b>
+  <%#= @parcel.poa %>
+</p> -->
+
+  <p>
+    <b>Asking:</b>
+    $<%= @parcel.bid_open %>
+  </p>
+
+
+<% end %>
+
+
+<% if signed_in? && current_citizen.admin  %> 
+
+  <%= link_to 'Edit', edit_parcel_path(@parcel), class: 'btn btn-primary' %> 
+
+<% end %>

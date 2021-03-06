@@ -1,0 +1,25 @@
+<li>
+  
+  <%= gravatar_for citizen, size: 52 %>
+  <%= link_to citizen.name, citizen %>
+
+
+                                
+
+  <%# if current_citizen.admin? && !current_citizen?(citizen) %>
+  <% if current_citizen.admin? && !current_citizen?(citizen) %>
+
+    	| <%= link_to "delete", citizen, method: :delete,
+                                  data: { confirm: "Sure about that?" } %>
+
+    <% end %>
+    
+
+    <% if current_citizen.admin? %>
+    	| Approve for Global Feed? <%= check_box_tag :approval, citizen.id, toggle: citizen.approval?, class: 'admin-approve-cb' %>
+  	<% end %>
+
+  
+</li>
+
+

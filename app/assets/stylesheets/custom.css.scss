@@ -1,0 +1,288 @@
+@import 'bootstrap';
+
+/* fonts */
+@import url(http://fonts.googleapis.com/css?family=Raleway:300,600);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab);
+@import url(http://fonts.googleapis.com/css?family=Libre+Franklin);
+@import 'https://fonts.googleapis.com/css?family=Palanquin:100';
+
+
+/* global styles */
+
+@mixin box_sizing {
+  -moz-box-sizing: border-box; 
+  -webkit-box-sizing: border-box; 
+  box-sizing: border-box;
+}
+
+html {
+  font-family:'Open Sans', sans-serif;
+  overflow-y: scroll;
+  padding:0;
+  margin:0;
+  height: 100%;
+  background: #D5D1D3;
+  }
+
+body {
+  font-family: 'Open Sans', sans;
+  height: 100%;
+  background: #FFF; 
+  padding-top: 3px;
+}
+
+#storylinks-container {
+   opacity: 0.92337;
+   width: auto;
+   height: auto;
+   min-height: 991px;
+   margin-left: 2%;
+   margin-right: 2%;
+   padding: 5px;
+   background: #fff;
+}
+
+#storylinks {
+  opacity: 0.9223;
+  width: auto;
+  margin-right: 2%;
+  height: auto;
+  padding-top: 57px;
+  min-height: inherit;
+  padding: 2px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+
+}
+
+.outer {
+  font-family: 'Open Sans', sans-serif;
+  width: auto;
+  height: auto;
+  min-height: 90%;
+  font-size:117%;
+  font-weight: 400;
+  text-align: left;
+  margin-left: 1%;
+  min-width: 10%;
+  max-width: 98%;
+  .inst {
+  font-family: monospace;
+  font-size: 13px;
+  color: #959595;
+  padding: 3px;
+  margin-left: 2px;
+  }
+
+  p {
+        color: #2e1813;
+        padding: 3px;
+        margin-left: 7px;
+        margin: 5px;
+        font-size: 103%;
+        text-wrap: wrap;}
+        a:link, a:active, a:visited {
+        color: #AD6942;
+        background: transparent;
+        }
+        a:hover {
+        color: #be6230;
+        text-decoration: none;
+        }
+        p img_right {
+        float: right;
+        margin-right: 20px;
+           }
+        p img_left {
+        float: left;
+        margin-left: 20px;
+          }
+  .numeric {
+  padding: 3px;
+  }
+}
+
+blockquote {
+    color: #000;
+    font-family: 'Palanquin', sans-serif;
+    font-size: 1.2em;
+    line-height: 0.92em;
+    padding: 0.5em;
+    padding-left: 0.8em;
+    margin-left: 20%;
+    margin-right: 20px;}
+
+
+
+
+section {
+  overflow: visible;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+  h1 {
+    margin-bottom: 10px;
+  }
+}
+
+
+//* styles *//
+
+p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.33em;
+  line-height: 0.95em;
+  padding-bottom: 0.11em;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 1.83em;
+  font-weight: bold;
+  font-family: 'Libre Franklin', sans-serif;
+  letter-spacing: -1px;
+  line-height: 1.27em;
+  color: #0F2105;
+  margin-left: -0.15em;
+}
+
+h2 {
+  font-family: 'Open Sans', serif;
+  font-size: 1.53em;
+  font-weight: bolder;
+  color: #717431;
+  margin-bottom: 0.33em;
+}
+
+
+h3 {
+  font-size: 1.17em;
+  font-weight: bold;
+  padding: 2px;
+  margin: 2px;
+  margin-bottom: 5px;
+  color: #728E2E;
+}
+
+
+/* linkage */
+
+a, a:active {
+text-decoration: none;
+-webkit-border-radius: 3px;
+-moz-border-radius-topright: 3px;
+-moz-border-radius-bottomleft: 3px;
+-moz-border-radius-bottomright:3px;
+-moz-border-radius-topleft: 3px;
+}
+
+
+a, a:link {
+text-decoration: none;
+-webkit-border-radius: 3px;
+-moz-border-radius-topright: 3px;
+-moz-border-radius-bottomleft: 3px;
+-moz-border-radius-bottomright:3px;
+-moz-border-radius-topleft: 3px;
+}
+
+
+#content-border {
+     z-index: 10;
+     margin-right: 1%;
+     margin-left: 1%;
+     opacity: 0.9137;
+     border-radius: 0.23em;
+     webkit-border-radius: 0.23em;
+     width: auto;
+     min-height: inherit;
+     padding: 5px;
+     font-size: 13pt;
+     border: 3px solid #759133;
+     -moz-box-shadow: 2px 1px 0px #EDEDED;
+     -webkit-box-shadow: 2px 1px 0px #EDEDED;
+     box-shadow: 2px 1px 0px #EDEDED;
+      background: #fff;
+      margin-top: 83px;
+       #content {
+          opacity: 0.9723;
+          width: auto;
+          margin-left: 7%;
+          margin-right: 7%;
+          height: auto;
+          margin-top: 200px;
+          padding-top: 57px;
+          padding: 2px;
+          -webkit-border-radius: 5px;
+          -moz-border-radius: 5px;
+          border-radius: 5px;
+        }
+
+}
+
+
+.outer {
+	width: auto;
+  min-height: 99%;
+	align: center;
+	text-align: left;
+	border: 0px dashed #cf9b4a;
+	padding: 0.5em;
+}
+
+
+p {
+font-color: #221f1e;
+margin-left: 9px;
+margin-right: 9px;
+}
+
+.btn-custom { background-color: hsl(26, 3%, 96%) !important; background-repeat: repeat-x; filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#aad317", endColorstr="#73b125"); background-image: -khtml-gradient(linear, left top, left bottom, from(#aad317), to(#73b125)); background-image: -moz-linear-gradient(top, #aad317, #73b125); background-image: -ms-linear-gradient(top, #aad317, #73b125); background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #aad317), color-stop(100%, #73b125)); background-image: -webkit-linear-gradient(top, #aad317, #73b125); background-image: -o-linear-gradient(top, #aad317, #73b125); background-image: linear-gradient(#aad317, #73b125); border-color: #73b125 #73b125 hsl(0, 0%, 1%); color: #fff !important; -webkit-font-smoothing: antialiased; font-size:19px; padding: 13px; margin: 7px; -moz-border-radius: 0.22em; 
+      -webkit-border-radius: 0.22em;
+      border-radius: 0.22em;
+      text-decoration: none;
+      a {color: #fcfcfc;
+         a:link {color: #fcfcfc;
+         &:visited { color: #fcfcfc;
+         &:active { color: #fcfcfc;
+         &:hover { color: #fcfcfc; }
+        }
+      }
+    }
+  }
+}
+  .btn-custom:hover {
+        background: #aad317;
+    }
+
+  .btn-custom:visited {
+        background: #aad317;
+    }
+
+
+
+
+        #caption {color: #000; font-family: 'Liberation Serif';} 
+        .img { background-color: #fff; opacity: 1.0;
+}
+
+
+
+
+
+
+.sidebar {
+  width: 150 px;
+  height: 200px;
+}

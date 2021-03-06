@@ -1,0 +1,12 @@
+
+
+<a href="<%= citizen_path(current_citizen) %>">
+  <%= gravatar_for current_citizen, size: 52 %>
+</a>
+
+<div class="gravatar-name">  <%= link_to current_citizen.name, current_citizen %>  </div>
+
+<div class="contribution_count"> 
+  <%= pluralize(current_citizen.ideas.count, "Contributions") %>
+ </div>
+

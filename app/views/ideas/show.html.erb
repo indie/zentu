@@ -1,0 +1,56 @@
+
+
+<div class="span2">
+
+  <div id="tag_cloud">
+            <% tag_cloud Idea.tag_counts, %w{t s m l} do |tag, css_class| %>
+            <%= link_to tag.name, tag_path(tag.name), class: css_class %>
+          <% end %>
+        </div>
+
+
+</div>
+
+    <div class="container"><br /><br />
+
+
+      <div class="span6">
+
+
+      <div id="showidea">
+
+         <% if @idea.image? %>
+           <%= link_to image_tag(@idea.image) %>
+         <% end %>
+
+          <%= markdown(@idea.content) %>
+
+         <div id="appendages">
+
+         <% if @idea.supplemental? %>
+           <strong>Source</strong>&nbsp;&nbsp;<%= link_to image_tag("globe.png", alt: "source", height: "20", width: "20"), url_for(@idea.supplemental), title: "Source", target: "_blank" %>
+          <% end %>
+
+            <span class="tag">
+              <strong>Filed under:</strong>&nbsp; <%= @idea.tag_list %><br />
+              <%= link_to "Permanent link", @idea %>
+
+            </span>
+
+        </div>
+
+          <p></p>
+
+        <% if current_citizen %>
+          <div class="btn btn-primary"><%= link_to 'Edit', edit_idea_path(@idea) %></div>
+          <div class="btn btn-primary"><%= link_to "Delete", @idea, :method => :delete, :confirm => "Are you sure you want to delete this contribution forever!?" %></div>
+        <% end %>
+
+            <div class="btn btn-primary"><%= link_to 'Back', root_path  %></div>
+
+
+      </div>
+      </div>
+
+      </div>
+

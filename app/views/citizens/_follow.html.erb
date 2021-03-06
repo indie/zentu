@@ -1,0 +1,6 @@
+<%= form_for(current_citizen.relationships.build(followed_id: @citizen.id),
+             remote: true) do |f| %>
+  <div><%= f.hidden_field :followed_id %></div>
+  <br />
+  <%= f.submit "Follow", class: "btn btn-primary" %>
+<% end %>

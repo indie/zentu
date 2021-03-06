@@ -1,0 +1,39 @@
+<!-- begin debug to determine actvie status upon muliple-selected queries -->
+<%#= @meeting_params.inspect %>    
+<%#= @extra_q.inspect %>    
+<!-- end debug -->
+
+<br /><br />
+<div class="search-inst">Select a category</div>
+
+    <ul class="navbar-cat nav-pills">
+        <% @param_data["category_cont"].each do | key, val | %>
+        <li><%= link_to key, render_link("category_cont", val, @extra_q), 
+        :style => render_css("category_cont", val, @extra_q) %></li>
+        <% end %>
+    </ul>
+
+    <br />
+    <div class="search-inst">Add a city to find the most local results</div>
+
+    <ul class="navbar-state nav-pills">
+        <% @param_data["city_cont"].each do | key, val | %>
+        <li><%= link_to key, render_link("city_cont", val, @extra_q), 
+        :style => render_css("city_cont", val, @extra_q) %></li>
+        <% end %>
+    </ul>
+
+    <br />
+
+<div class="search-inst">OR, use the search box to search for specialists with key words <em>(e.g. "roofing Hillsboro")</em></div>
+
+    <div class="searchbox">
+      <%= search_form_for @q do |f| %>
+      <%= f.text_field :name_or_city_or_category_or_description_cont, :height => '3' %><br />
+      <%= f.submit "Search by Specialty", :class => 'btn btn-primary' %>
+      <div class="btn btn-primary btn-small"><%= link_to 'Clear All Search Terms', 'companies/clear' %></div>
+
+      <% end %>
+
+    </div>
+  </div>

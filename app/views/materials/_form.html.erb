@@ -1,0 +1,15 @@
+<%= simple_form_for(@material) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :name %>
+    <%= f.input :category, collection: ['Concrete, Bricks + Blocks', 'Cross-Laminated Timber', 'Roof', 'Insulation', 'Windows', 'Doors', 'Water + Wastewater', 'Energy', 'Sheathing', 'Lighting' ] %>
+    <%= f.label "Parent" %>    <%= f.collection_select :parent_id, Material.order(:name), :id, :name, include_blank: true  %>
+
+    <%= f.input :description %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

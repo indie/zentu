@@ -1,0 +1,85 @@
+<%= simple_form_for(@company) do |f| %>
+  <%#= f.error_notification %>
+  
+  <div class="form-inputs">
+    <%= f.input :name %>
+    <%= f.input :category, collection: [
+        'Scrap Metal Recycling',
+        'Reuse Materials',
+        'Land Survey',
+        'Architecture + Planning', 
+        'General Contractor',
+        'General Labor',
+        'Sheetrock + Drywall Finishing',
+        'Concrete + Foundations',
+        'Deconstruction',
+        'Drainage + Sewer',
+        'Roofing + Siding',
+        'Electrician',
+        'Fences + Decking',
+        'Woodworking + Carpentry',
+        'Plumbing',
+        'Roofing',
+        'Landscaping + Pruning',
+        'Prefab',
+        'Home Inspection',
+        'Other Specialist',
+        'Materials Upcycling'] %>
+<div class="inst">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; You <b>may</b> use markdown in the following field: iframe and embedded video works too! </div>
+    <%= f.input :description %>
+    <%= f.input :image %>
+    <%= f.input :city, collection: ['Aurora',
+    'Aloha',    
+    'Banks',
+    'Bend',
+    'Beavercreek',
+    'Beaverton',
+    'Canby',
+    'Clackamas',
+    'Colton',
+    'Corbett',
+    'Cornelius',
+    'Deer Island',
+    'Dundee',
+    'Estacada',
+    'Forest Grove',
+    'Gladstone',
+    'Government Camp',
+    'Gresham',
+    'Hillsboro',
+    'Hubbard',
+    'King City',
+    'Lake Oswego',
+    'Longview WA',
+    'Milwaukie',
+    'Molalla',
+    'Newberg',
+    'North Plains',
+    'Oregon City',
+    'NW Portland',
+    'SW Portland',
+    'NE Portland',
+    'SE Portland',
+    'Sandy',
+    'Scappoose',
+    'Sherwood',
+    'St Benedict',
+    'St Helens',    
+    'Tigard',
+    'Troutdale',
+    'Tualitin',
+    'Vernonia',
+    'Vancouver WA',
+    'Welches',
+    'West Linn',
+    'Wilsonville',
+    'Woodburn'] %>
+    <%= f.input :state, collection: ['Oregon', 'Washington'] %>
+    <%= f.input :telephone %>
+    <%= f.input :website %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

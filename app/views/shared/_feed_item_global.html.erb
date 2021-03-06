@@ -1,0 +1,47 @@
+<% if citizen.approval? %>
+
+<class id="<%= feed_item.id %>">
+
+  <%= link_to gravatar_for(feed_item.citizen), feed_item.citizen %>
+
+  <span class="citizen">
+    <%= link_to feed_item.citizen.name, feed_item.citizen %>
+  </span>
+
+  <span class="content">
+    <%= markdown(feed_item.content) %>
+  </span>
+  
+  <span class="supplemental">
+    <div class="hr-idea">
+        <% if feed_item.image? %>
+          <%= image_tag(feed_item.image) %>
+        <% end %>
+    </div>
+  </span>
+
+<div id="appendages">
+    <span>
+      Source <% if feed_item.supplemental? %>
+      <%= link_to image_tag("globe.png", alt: "source", height: "20", width: "20"), url_for(feed_item.supplemental), target: "_blank" %>
+      <% end %>
+    </span>
+
+    <span class="tag"> <%#= feed_item.tags %>
+    Tags <%= raw feed_item.tags.map(&:name).map { |t| link_to t, tag_path(t) }.join(', ') %>
+    </span><br />
+
+    <span class="timestamp">
+      Added <%= time_ago_in_words(feed_item.created_at) %> ago
+    </span> 
+
+
+    <span class="viewitem">
+        <%= link_to "view", feed_item,
+             title: feed_item.content %>
+
+    </span>
+  </div>
+</li>
+
+<% end %>

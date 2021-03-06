@@ -1,0 +1,17 @@
+<% if current_citizen && current_citizen.admin? %>
+ 
+<h2>Edit Listing</h2>
+
+
+<div class="span2"></div>
+
+<div class="span10">
+
+<%= render 'form' %>
+
+<%= link_to 'Show', @parcel, class: 'btn btn-primary' %> 
+<%= link_to 'Back', parcels_path, class: 'btn btn-primary' %>
+
+</div>
+
+<% end %>

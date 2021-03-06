@@ -1,0 +1,29 @@
+.outer {
+	width: auto;
+	align: center;
+	text-align: left;
+	font-size: 9pt;
+	border: 0px dashed #cf9b4a;
+	padding: 0.5em;
+}
+
+.topbox {
+  display: -moz-inline-box;
+  display: inline-block;
+  width: auto;
+margin-left: 140px;
+margin-right: 140px;
+  padding: 0.255em;
+  vertical-align: top; 
+  margin-top:  0.03em;
+  background: transparent;
+}
+
+
+.box {
+  font-family: 'Open Sans', sans-serif;
+  display: -moz-inline-box;
+  display: inline-block;
+  padding: 0.255em;
+  vertical-align: top; 
+}

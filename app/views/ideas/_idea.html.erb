@@ -1,0 +1,38 @@
+
+<li>
+
+  <span class="supplemental">
+    <%= image_tag(idea.image) %>
+  </span>
+
+  <span class="content">
+    <div class="idea">
+    <%= markdown(idea.content) %>
+    </div>
+  </span>
+
+  <span class="supplemental">
+     <%= idea.supplemental %>
+  </span>
+
+  <span class="tag">
+     <%= raw idea.tags.map(&:name).map { |t| link_to t, tag_path(t) }.join(', ') %>
+  </span>
+
+
+  <span class="timestamp">
+    <%= time_ago_in_words(idea.created_at) %> ago
+  </span>
+
+
+
+  <span class="delete-idea">
+  <% if current_citizen?(idea.citizen) %>
+    <%= link_to "delete", idea, method: :delete,
+                                data: { confirm: "Delete forever?" },
+                                title: idea.content %>
+  <% end %>
+  </span>
+
+  <br />
+</li>

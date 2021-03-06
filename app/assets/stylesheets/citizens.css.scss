@@ -1,0 +1,99 @@
+// Place all the styles related to the Citizens controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+.instructions {
+  span: 7;
+  margin-left: 10%;
+  margin-right: 10%;
+  font-size: 111%;
+}
+
+
+.notage {
+  width: auto;
+  height: auto;
+  font-size: 77%;
+  line-height: 0.88em;
+  font-family: 'Open Sans', sans-serif;
+  text-align: left;
+  margin: 10px;
+  border-left: #d2c6ab solid 1px;
+  padding-left: 11px;
+}
+
+aside {
+  section {
+    padding: 10px 0;
+    border-top: 1px solid #d2c6ab;
+    &:first-child {
+      border: 0;
+      padding-top: 0;
+    }
+    span {
+      display: block;
+      margin-bottom: 3px;
+      line-height: 1;
+    }
+    h1 {
+      font-size: 1.4em;
+      text-align: left;
+      letter-spacing: -1px;
+      margin-bottom: 3px;
+      margin-top: 0px;
+    }
+  }
+}
+
+.gravatar {
+  float: left;
+  margin-right: 10px;
+}
+
+.citizens {
+  a:link { color: #709203; background: transparent; 
+  a:visited { color: #709203; background: transparent; 
+  a:hover { color: #728E2E; text-decoration: underline; }}}
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-top: 1px solid #AB5D35;
+    &:last-child {
+      border-bottom: 1px solid #AB5D35;
+    }
+  }
+}
+
+
+.citizen_avatars {
+  overflow: auto;
+  margin-top: 10px;
+  .gravatar {
+    margin: 1px 1px;
+  }
+}
+
+.contribution_count {
+  font-size: 0.75em; }
+
+.idea-count {
+  font-family: 'Roboto Sans', serif;
+  font-size: 75%; }
+
+.follower-info {
+  font-family: 'Roboto Slab', sans-serif;
+  font-size: 0.75em;
+}
+
+.gravatar-name {
+  font-family: Raleway, sans-serif;
+  font-size: 1.11em;
+  font-weight: bold;
+  color: #678703;
+}
+
+

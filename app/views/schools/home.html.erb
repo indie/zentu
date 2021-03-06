@@ -1,0 +1,77 @@
+<% provide(:title) %>
+
+<!-- logged in view   -->
+
+  <% if signed_in? %>
+    <%= render 'shared/logged_in' %>
+  <% else %>
+
+<!-- index landing page -->  
+
+<div id="homepage">
+   
+   <h2>An Oregon Public Benefit Co. </h2>
+   
+   <h1>Welcome to the new generation of urban ecosteading: design lean, build green </h1> 
+
+   <br />
+
+    <div class="span5">
+
+          <div class="paragraph"><div class="img-right"><%= link_to image_tag("solarhouse.png", alt: "solar") %></div>
+          Welcome! Ecosteader is an Oregon Public Benefit Co. with a decidedly non-profit mission: to raise awareness of the ecological and economical benefits of <strong>owner-occupied</strong> urban ecosteading, and to help those who aspire to <%= link_to "adopt or build an ecostead", 'http://ecosteader.com/uploads/idea/image/54/sell-fsbo-xfr-title.png' %> of their own. </div>
+
+          <div class="paragraph">
+          Oregon is in imminent danger of getting destroyed by the California model of real estate overrun with <%= link_to "criminal HOAs", 'https://patch.com/california/sanmateo/prison-term-handed-down-2-8-million-san-mateo-embezzlement-case' %> and property management companies seeking to profit from "landlording" on aging infrastructure and "for rent" lease contracts that suck the equity and the ecological health out of a community. The biggest problem, however, is all of the <%= link_to "corrupt Realtors", 'https://old.reddit.com/r/RealtorsSuck' %> whose brokerages are designed to perpetuate lies that the MLS is the only "market" of housing and that no matter where you look, the demand for what they are selling is insatiable. Do not be bamboozled by the Realtors!</div>
+
+          <div class="paragraph">
+          Do not acquire property in our state that you intend to flip or rent out. Oregonians have overwhelmingly supported the most prohibitive and expensive "landlord taxes" and real estate flipper penalties in the country. We created this website to champion for good, smart, and creative people seeking to find and build community <em>within</em> their communities, not in a rental or yet another despicable HOA with dues for a tennis court or pool.  
+
+          <h4>At Ecosteader we believe, unequivocally, that owner-occupied properties are the key to healthy, economically- sustainable neighborhoods and cities. </h4>
+
+          </div>
+
+               <div class="btn btn-primary btn-large"><%= link_to "Empower your Ecostead", docs_path %></div>
+
+
+      <h3>Stop Corrupt Realtors </h3>     
+         <div class="paragraph">Central to our purpose is the imperative to expose the ongoing <%= link_to "corruption in the Oregon Real Estate Agency", 'http://www.oregon.gov/REA/Pages/Index.aspx' %> which is an arm of the <em>even more corrupt</em> National Association of Realtors (NAR). The NAR is a where all of the supposedly-"professional" licensed Realtor / Broker members are unethically and illegally perpetuating a tradition of <%= link_to "illegal price fixing that started in the 1940's", 'http://ezinearticles.com/?The-Origins-of-the-Six-Percent-Real-Estate-Agent-Commission&id=614635' %>. Conspiring to fix prices at a percent was <%= link_to "ruled ILLEGAL by the Supreme Court", 'https://caselaw.findlaw.com/us-supreme-court/339/485.html' %> , but Realtors are experts at using coercion and lies to subvert the law, to <strong>literally steal the equity</strong> from the people who have earned it over many years or decades of caring for their homes, farms, or residences. Even a one percent commission is too much!</div>  
+
+      <h3>Outlaw or Overturn HOAs </h3>
+
+          <div class="paragraph">The second way we champion for the ecological health of our neighborhoods and communities is to spread awareness and take action they need to successfully oppose or overtun HOAs. The unfortunate reality is that HOAs divert what would otherwise be publicly-accountable taxpayer dollars into private coffers used for kickbacks to the relatives or family members of people sitting on HOA boards. The evidence is overwhelming and plentiful: HOAs do not work; they yield traffic nightmares, create pollution and landfill waste due to frequent turnover of residents, rob citizens of their equity, rob cities of community involvement, and create class divisions that result in gentrified neighborhoods. The truth is that HOAs duplicate, almost always inefficiently, goals of city services, like parks and recreation. Your HOA is not welcome here. </div>
+           <div class="btn btn-primary btn-large"><%= link_to "Read more about how Real Estate is broken", alternative_path %></div></div>
+
+      <!-- span3 -->
+
+    <div class="span3">
+
+<iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://www.openstreetmap.org/export/embed.html?bbox=-123.16154479980469%2C45.30628553076033%2C-122.2551727294922%2C45.72535642341016&amp;layer=hot" style="border: 1px solid black"></iframe><br/><small><a href="http://www.openstreetmap.org/#map=11/45.5162/-122.7084&amp;layers=H">View Larger Map</a></small>
+     
+          <div class="paragraph">
+          <div class="img-left"><a href="/"><img alt="trees" src="/assets/trees-d287451c4ae7e4e59c1ff344fce052c5.png" /></a></div>
+          Did you know that every city in Oregon is surrounded by an 
+          <a href="http://www.oregonmetro.gov/urban-growth-boundary">urban growth boundary</a>, or UGB?</div>
+
+          <div class="paragraph"> 
+          The expansion of this boundary is of vital importance to everyone.  Ecosteader is currently serving Oregon cities with concerns about their UGBs, but you <strong>do not need to be an Oregonian</strong> to adopt these philosophies or practices in your community. All of the content on this website is free and open-source; we encourage you to pro-actively become an Ecosteader. 
+
+          <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+
+       </div>
+  
+        
+
+
+
+
+
+     </div><!-- span3 -->      
+
+
+      
+
+</div>
+
+  <% end %>
+

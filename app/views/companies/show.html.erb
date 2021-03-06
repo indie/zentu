@@ -1,0 +1,87 @@
+<% provide(:title, @company.name) %>
+
+<div id="homepage">
+
+    
+    <div class="span2"></div>
+    <div class="span7">
+      <div class="show-company">
+
+
+          <h1>
+            <%= link_to @company.name, url_for(@company.website), target: "_blank" %>
+          </h1>
+
+          <p>
+            <%= image_tag(@company.image) %>
+          </p>
+
+
+          <p>
+            <%= markdown(@company.description) %>
+          </p>
+
+          <p>
+            <b>Specializes in</b>
+            <%= @company.category %>
+          </p>
+          
+          <p>
+            <b>Location</b>
+            <%= @company.city %>, <%= @company.state %>
+
+          </p>
+
+          <p>
+            <b>Telephone</b>
+            <%= @company.telephone %>
+          </p>
+
+          <% if @company.website? %>
+
+          <p>
+            <%= link_to @company.website, url_for(@company.website), target: "_blank" %>
+          </p>
+          <% else %>
+
+          <br />
+
+          <% end %>
+          </div> <!-- close show-company css class -->
+           
+          <% if signed_in? && current_citizen.admin  %> 
+            <div class="btn large btn-primary"><%= link_to 'Edit', edit_company_path(@company) %></div>
+          <% end %>
+
+            <div class="btn large btn-primary"><%= link_to 'Back', companies_path %></div>
+  </div>
+
+<div class="span2">
+
+    <h3> </h3>
+    
+
+      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- ideas feed -->
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:120px;height:600px"
+             data-ad-client="ca-pub-1067848072259866"
+             data-ad-slot="2238045610"></ins>
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>    
+
+
+
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <script>
+          (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-5682118050471345",
+            enable_page_level_ads: true
+          });
+        </script>
+
+</div>
+
+
+</div>

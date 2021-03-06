@@ -1,0 +1,111 @@
+// Place all the styles related to the nodes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#tabbers {
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.87em;
+  list-style: none;
+  padding: 0;
+  border-bottom: solid 1px #fcfcfc;
+  height: 47px;
+  width: auto;
+  margin-left: -26px;
+  margin-right: -5px;
+  margin-top: -5px;
+  background-color: #B0D62A;
+  background: -moz-linear-gradient(top, #B0D62A 0%, #B0D62A 70%, #7E9840 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#B0D62A), color-stop(70%,#B0D62A), color-stop(100%,#7E9840)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #B0D62A 0%,#B0D62A 70%,#7E9840 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #B0D62A 0%,#B0D62A 70%,#7E9840 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #B0D62A 0%,#B0D62A 70%,#7E9840 100%); /* IE10+ */
+  background: linear-gradient(to bottom, #B0D62A 0%,#B0D62A 70%,#7E9840 100%); /* W3C */
+  li {
+    margin-top: 17px;
+    margin-left: 2px;
+    margin-bottom: 5px;
+    line-height: 1.33em;
+    padding: 2px;
+    float: left;
+    font-size: 0.80em;
+    a {
+      padding: 0 3px;
+      padding-top: 5px;
+      padding-bottom: 2px;
+      height: 27px;
+      display: block;
+      text-decoration: none;
+      border: solid 1px #e0e0e0;
+      border-bottom: solid 0px #8CA645;
+      color: #373737;
+      background-color: white;
+      -moz-border-radius-topleft: 0.37em;
+      -moz-border-radius-topright: 0.37em;
+      border-top-right-radius: 0.37em;
+      border-top-left-radius: 0.37em;
+      background: -moz-linear-gradient(top, #FFF 0%, #FFF 70%, #CCC 100%); /* FF3.6+ */
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#FFF), color-stop(70%,#FFF), color-stop(100%,#CCC)); /* Chrome,Safari4+ */
+      background: -webkit-linear-gradient(top, #FFF 0%,#FFF 70%,#CCC 100%); /* Chrome10+,Safari5.1+ */
+      background: -o-linear-gradient(top, #FFF 0%,#FFF 70%,#CCC 100%); /* Opera 11.10+ */
+      background: -ms-linear-gradient(top, #FFF 0%,#FFF 70%,#CCC 100%); /* IE10+ */
+      background: linear-gradient(to bottom, #FFF 0%,#FFF 70%,#CCC 100%); /* W3C */
+
+      &.active {
+        background: #FFF;
+        font-weight:bold;
+        border-bottom: solid 3px #FFF;
+        text-shadow: #e0e0e0 0px 1px 0px; }
+      &:hover { text-shadow: #818284 1px 3px 3px;}
+      &:focus { color: #728E2E; }
+    }
+  }
+}
+
+
+.nav-pills {
+  font-family: 'Roboto Slab', sans-serif;
+  font-size: 0.77em;
+  background: transparent;
+  list-style: none;
+  width: auto;
+  margin-left: 25px;
+      &.active {
+        background: #C9844C;
+        font-weight:bold;
+        text-shadow: #e0e0e0 0px 1px 0px; }
+      &:hover { background-color: #FFFFFF;}
+      &:focus { color: #728E2E; }
+}
+
+#breadcrumbs {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.13em;
+  a:link {color: #fff}
+  &:hover {color: #796f62; background-color: #fcfcfc}
+}
+
+
+.category-count {
+ font-family: 'Raleway', sans-serif;
+  font-size: 97%;
+  letter-spacing: 1px;
+  color: #8CA645;
+}
+
+
+#user_header {
+  float: right;
+  font-size: 1.01em;
+  font-family: 'Source Sans Pro', sans-serif;
+  h2 {
+  color: #B36035;
+  }
+}
+.marketplace-items {
+  font-size: 81%;
+}
+
+
+.minitabs {
+  list-style: none;
+}

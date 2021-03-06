@@ -1,0 +1,27 @@
+<div id="homepage">
+
+<div class="span4">
+    <%= render 'shared/citizen_info' %>
+    <%= render 'shared/stats' %>
+    <%= render 'shared/idea_form' %>
+
+      <div id="tag_cloud">
+        <% tag_cloud Idea.tag_counts, %w{t s m l} do |tag, css_class| %>
+          <%= link_to tag.name, tag_path(tag.name), class: css_class %>
+        <% end %>
+      </div><!-- tag cloud -->
+  
+  </div><!-- span2 -->
+
+  <div class="span5">
+   <div class="feed">
+    <h3>Recent Contributions</h3>
+      <br /><br />
+        <div id="global-list">
+            <%= render 'shared/global_feed' %>
+        </div>      
+      </div>
+
+  </div>
+
+</div>

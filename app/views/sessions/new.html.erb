@@ -1,0 +1,44 @@
+<% provide(:title, "Sign in") %>
+
+
+<div class="span5"></div>
+
+<div class="span3">
+    <h2>Sign in </h2>
+      <p></p>
+    <%= form_for(:session, url: sessions_path) do |f| %>
+
+      <%= f.label :email %><br />
+      <%= f.text_field :email %>
+
+      <br />
+
+      <%= f.label :password %><br />
+      <%= f.password_field :password %>
+
+      <br />
+
+      <%= f.submit "Sign in", class: "btn btn-large btn-primary" %>
+    <% end %>
+
+    <h4> Wanna be an Ecosteader?  <br />
+    <br />
+    <%= link_to "Signups available by Invite Only", signup_path %>
+    </h4>
+                <h2>To advertise on Ecosteader, please WRITE:  <a href="mailto:info@ecosteader.com">info - at - ecosteader.com</a> or leave a message at (971) 238-ECOS. </h2>
+
+    </div>
+
+    <div class="span3">
+    <h4> Ecosteader is PDX's community web portal for citizens with an ecological consciousness about things like:</h4>
+      <ul>
+        <li><strong>Lean design</strong> -- Living smaller, by choice, to reduce carbon footprint </li>
+        <li><strong>Green building</strong> -- Environmentally-friendly construction, materials, architecture, techniques</li> 
+        <li><strong>Energy conscientiousness</strong> -- Emerging clean tech (both on and off the grid) </li>
+        <li><strong>Smart urban planning</strong> -- A well-designed city can be one of the most ecologically-efficient places to live; let's design smarter infrastructure </li>
+        <li><strong>Urban ecosteading</strong> -- Composting / green roofs / community gardening. How to teach stewardship land stewardship in an urban setting? </li>
+        <li><strong>Transportation</strong> -- Greener ways to get around in the 21st Century </li>
+
+
+      </ul>
+    </div>

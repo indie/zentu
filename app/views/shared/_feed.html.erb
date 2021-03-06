@@ -1,0 +1,12 @@
+<% if @feed_items.any? %>
+
+  <ol class="ideas">
+	    <%= render partial: 'shared/feed_item', collection: @feed_items %>
+  </ol>
+
+<div class="apple_pagination">
+<%= will_paginate @feed_items %>
+</div>   
+
+<% end %>
+

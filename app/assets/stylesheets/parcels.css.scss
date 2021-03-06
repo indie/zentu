@@ -1,0 +1,36 @@
+.thumbnail {
+width: 50px;
+height: 50px;
+margin: -0.12em;
+.img { align: center;}
+}
+
+.company-thumbnail {
+width: 100px;
+height: 100px;
+margin: -0.12em;
+.img { align: center;}
+}
+
+th {
+background-color: #a6d200;
+}
+
+tr {
+	line-height: 0.83em;
+}
+
+.table-striped tbody tr:nth-child(odd) td {
+   background-color: #eefac1;
+}
+
+.table-striped tbody tr:nth-child(even) td {
+   background-color: #d5ec7c;
+}
+
+.ecolist {
+border: 2px solid #e0e0e0;
+margin-left: 30px;
+line-height: 2 em;
+	
+}

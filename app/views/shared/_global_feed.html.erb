@@ -1,0 +1,17 @@
+
+
+  <ol class="ideas">
+	    <%= render partial: 'shared/feed_item', collection: @global_feed %>
+  </ol>
+   
+<div class="apple_pagination">
+<%= will_paginate @global_feed %>
+</div>
+
+
+<!-- OMG YAAAAAAAAAAAAAAAAAAAAAAAAAAAAY -->
+<%#= render partial: 'shared/feed_item', collection: @global_feed %> 
+
+
+
+

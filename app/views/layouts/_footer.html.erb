@@ -1,0 +1,48 @@
+<div id="footergroup">
+        <div class="sitemap">
+      
+            <%= link_to image_tag("pinterest.png", alt: "Pinterest", title: "Ecosteader on Pinterest", height: "25", width: "25"), 'http://pinterest.com/ecostead/' %>
+            <%= link_to image_tag("debian-swirl.png", alt: "Debian", height: "25", width: "25", title: "Built with Debian, & other Linux variants"), 'http://www.debian.org' %>
+            <%= link_to image_tag("fave.png", alt: "<3", title: "Site built with love and Rails ... by HCS", height: "28", width: "28"), 'http://www.hackeress.com' %>
+          </div>
+
+    <div class="copynote"><div class="copyquote">
+          <em>"The secret of change is to focus your energy not on fighting the old, but on <strong>building the new</strong>."</em></div>
+  &#169; 2018  Ecosteader &amp; Company is a registered Oregon Public Benefit Company &middot; <%= link_to "contact", contact_path %>  &middot;
+            <%= link_to "mission + about", mission_path %>  &middot;
+            <%= link_to "tos + legal promulgation", tos_path %> &middot;
+            <%= link_to "team + colophon", colophon_path %>  &middot;
+            <%= link_to "advertise + press", press_path %> &middot;
+
+    </div>
+
+    <div id="bottomdiv"></div>
+<script type="text/javascript">
+
+$(document).on('load scroll', stickyFooter);
+$(window).on('resize', stickyFooter);
+
+function stickyFooter()
+{
+    var $footer = $("#footergroup");
+    var $stickyFooter = $("#bottomdiv");
+    var footerOffsetTop = $footer.offset().top;
+    var viewportHeight = $(window).height();
+
+    // Subtract your sticky footer's height for a more seamless transition.
+    var scrollPosition = $(this).scrollTop() + viewportHeight - $stickyFooter.outerHeight();
+
+    // This is the real magic.
+    if(scrollPosition >= footerOffsetTop)
+    {
+        $stickyFooter.hide();
+    }
+    else
+    {
+        $stickyFooter.show();
+    }
+}
+
+</script>
+
+            <%= yield :scripts %>

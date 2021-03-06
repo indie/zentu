@@ -1,0 +1,21 @@
+
+<%= current_citizen.inspect if Rails.env.development? %>
+
+<% if current_citizen && current_citizen.can_add_parcel %>
+
+
+<h2>Create Classified Listing Parcel</h2>
+
+<div class="span2"></div>
+
+<div class="span10">
+
+
+<%= render 'form' %>
+
+<%= link_to 'Back', parcels_path, class: 'btn btn-primary' %>
+
+</div>
+
+
+<% end %>

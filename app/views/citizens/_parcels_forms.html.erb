@@ -1,0 +1,56 @@
+<%= form_for @parcel do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :parcel_id %><br />
+    <%= f.text_field :parcel_id %>
+  </p>
+  <p>
+    <%= f.label :auction_title %><br />
+    <%= f.text_field :auction_title %>
+  </p>
+
+  <p>
+    <%= f.label :details %><br />
+    <%= f.text_area :details %>
+  </p>
+
+   <p>
+    <%= f.label :media %><br />
+    <%= f.text_field :media %>
+  </p>
+
+  <p>
+    <%= f.label :category %><br />
+    <%= f.text_field :category %>
+  </p>
+  
+  <p>
+    <%= f.label :deed %><br />
+    <%= f.text_field :deed %>
+  </p>
+
+  <p>
+    <%= f.label :zoning %><br />
+    <%= f.text_field :zoning %>
+  </p>
+
+  <p>
+    <%= f.label :closing_date %><br />
+    <%= f.text_field :zoning %>
+  </p>
+
+
+
+  <% f.fields_for :parcels do |builder| %>
+
+    <p><%= builder.label :auction_title, "Auction Title" %></br>
+       <%= builder.text_field :details, "Detailed Description" %></br>
+       <%= builder.text_area :media, "Media" %></br>
+       <%= builder.text_area :category, "Category" %></br>
+       <%= builder.text_area :deed, "Deed Type" %></br>
+       <%= builder.text_area :zoning, "Zoning" %></br>
+       <%= builder.datetime :closing_date, "Closing Date" %></br>
+    </p>
+    <% end %>
+  <p><%= f.submit %></p>
+<% end %>

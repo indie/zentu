@@ -1,0 +1,52 @@
+<% provide(:title, "Edit citizen") %> 
+<h1>Update your profile</h1>
+
+
+
+<div class="row">
+
+<div class="span2"></div>
+  <div class="span5">
+
+  <div class="inst">  This info shows up on your public profile <br />
+                      To add an image to your profile, use the <%= link_to 'gravatars', "http://gravatar.com/emails" %> "change" link at the bottom.
+  </div>
+  <br />
+  <br />
+
+    <%= form_for(@citizen) do |f| %>
+      <%= render 'shared/error_messages', object: f.object %>
+      <%= f.label :name, "Name" %>
+      <%= f.text_field :name %><br />
+
+      <%= f.label :email %>
+      <%= f.text_field :email %><br />
+
+      <%= f.label :password %>
+      <%= f.password_field :password %>
+      <%= f.label :password_confirmation, "Confirm Password" %>
+      <%= f.password_field :password_confirmation %><br />
+
+      <%= f.label :telephone %>
+      <%= f.text_field :telephone %><br />
+
+      <%= f.label :about %>
+      <%= f.text_area :about, :rows => 5 %><br />
+
+      <%= f.label :notes %>
+      <%= f.text_area :notes, :rows => 5 %><br />
+
+
+
+      <br />
+
+      <%= f.submit "Save changes", class: "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+
+    <div class="span3">
+            <%= gravatar_for(@citizen) %>
+    <a href="http://gravatar.com/emails">change</a>
+  </div>
+
+</div>

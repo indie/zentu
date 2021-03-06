@@ -1,0 +1,11 @@
+
+
+<ul>
+  <% materials.each do |material, children| %>
+    <li>
+      <%= link_to_unless_current material.name, material %>
+      <%= render 'submenu_materials', materials: children if children.present? %>
+    </li>
+  <% end %>
+</ul>
+

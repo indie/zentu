@@ -1,0 +1,16 @@
+<% provide(:title, 'Ecosteader Community Citizens') %>
+
+<div class="row">
+
+<div class="span4"></div>
+	<div class="span8">
+	<div class="homepage">	
+    <h2>Follow and contribute to the global consciousness </h2>
+     <%= will_paginate %>
+	     <ul class="citizens"><%= render @citizens %>
+	     </ul>
+     <%= will_paginate %>
+   </div>
+</div>
+
+</div>

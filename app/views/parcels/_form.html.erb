@@ -1,0 +1,23 @@
+
+<%= simple_form_for(@parcel) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :name %>
+    <%= f.input :state, collection: ['Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut', 'Delaware', 'Florida', 'Georgia', 'Hawaii', 'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana', 'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota', 'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire', 'New Jersey', 'New Mexico', 'New York', 'North Carolina', 'North Dakota', 'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode Island', 'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont', 'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'] %>
+    <%= f.input :apn, label: "APN" %>
+    <%= f.input :legal_desc, label: "Legal Description" %>
+    <%= f.input :parcel_details %>
+    <%= f.input :acreage %>
+    <%= f.input :maplink, label: "Map URL" %>
+    <%= f.input :zoning %>
+    <%= f.input :deed, collection: ['warranty', 'special warranty', 'limited warranty', 'quitclaim', 'treasurer deed'] %>
+    <%= f.input :poa, label: "POA Dues?" %>
+    <%= f.filepicker_field :attachments, multiple: true %>
+    <%= f.input :bid_open, label: "Price" %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, class: 'btn btn-primary' %>
+  </div>
+<% end %>

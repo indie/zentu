@@ -1,0 +1,53 @@
+<% provide(:title, @citizen.name) %>
+
+<div class="span1"></div>
+
+  <div class="span6">
+
+    <% if @citizen.ideas.any? %>
+      <h1>Contributions (<%= @citizen.ideas.count %>)</h1>
+      
+
+      <ul class="ideas">
+        
+        <%= render @ideas %>
+      </ul>
+
+      <%= will_paginate @ideas %>
+
+    <% end %>
+    <hr>
+  </div>
+
+  
+ <div class="span2">
+
+  <section>
+      <h3>
+        <%= gravatar_for @citizen %>
+        <%= @citizen.name %>
+      </h3>
+    </section>
+   
+   <section>
+ 
+    <% if @citizen.approval? == true %>
+    <%= render 'shared/props' %>
+    <% end %>
+    <%= render 'shared/stats' if signed_in? %>
+   
+    <%= render 'follow_form' if signed_in? %>
+
+  </section>
+
+
+
+  <h3>About</h3>
+    <p><%= @citizen.name %></p>
+    <p><%= @citizen.about %></p>
+    <% if current_citizen && current_citizen.admin? %>  
+    <p><%= @citizen.telephone %></p>
+    <p><%= @citizen.notes %></p>
+    <% end %>
+ </div>
+

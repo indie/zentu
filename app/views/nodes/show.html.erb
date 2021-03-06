@@ -1,0 +1,44 @@
+<% provide(:title, ' '+@node.name+' ') %>
+
+<ul id="tabbers">
+    <% Node.roots.each do |node| %>
+        <li> <%= link_to node.name, node, class: ("active" if @node.root == node) %></li>
+    <% end %>
+</ul>
+ 
+    <div class="span12">
+            <h2><%= link_to '' +@node.name+' ', nodes_path %> </h2>
+
+            <%= render 'layouts/submenu_nodes', nodes: @node.root.descendants.arrange  %>
+
+            <br />
+    
+            <%= render 'awesome_az' %>
+
+
+            <div class="marketplace-items">
+                    <p>
+                     <%= @node.name %>
+                    </p>
+
+                    <p>
+                     <%= markdown(@node.content) %>
+                    </p>
+                    </div>
+
+             <% if current_citizen && current_citizen.admin? %>
+
+                    <p>
+                     <%= @node.ancestry %>
+                    </p>
+
+                <div class="container">
+                    <div class="btn btn-primary btn-small"><%= link_to 'New Node', new_node_path %></div>
+                    <div class="btn btn-primary btn-small"><%= link_to 'Edit', edit_node_path(@node) %></div>
+                    <div class="btn btn-primary btn-small"><%= link_to 'Back', nodes_path %></div>
+                </div>
+            <% end %>                        
+    </div>        
+
+
+</div>

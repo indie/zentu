@@ -1,0 +1,52 @@
+.show-company {
+	margin: 2.4em;
+	p {font-size: 1.55em;
+	   font-family: 'Open Sans', sans;
+	   a, a:link, a:active, a:visited { color: #647126; }
+	   a:hover { text-decoration: underline }}
+}
+
+
+
+.howtoadvertise {
+	margin-left: 3.55em;
+	padding: 0.41em;
+	h2 {
+	color:  #83A13D;
+	font-size: 133%;
+	}
+	h3 {
+	color: #645A6D;
+	font-size: 119%;
+	}
+}
+
+.searchbox {
+    margin-left: 2.23em;
+	padding: 0.11em;	
+}
+
+.search-inst {
+  font-family: 'Raleway', sans;	
+  text-transform: uppercase;
+  font-size: 1.35em;
+  margin-left: 1.73em;
+  padding-left: 7px;
+}
+
+
+.flt-rt {
+	float: right;
+	p { margin-left: -1em;
+		font-variant: smallcaps;
+		font-weight: bold;
+
+	tr {padding: 0.43em;
+		line-height: 1.73em;} }
+}
+
+
+.highlight { background-color: #E6EEC1;
+			 margin-top: 1.33em;
+			 margin-left: -0.33em;
+			 padding: 0.88em;}

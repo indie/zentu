@@ -1,0 +1,27 @@
+<%= form_for(@idea) do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+  
+<br />
+<br />
+<br />
+
+  <div class="field">
+    <%= f.text_area :content, placeholder: "Contribute something", :rows => 20, :cols => 15 %>
+  </div>
+
+   <div class="field">
+    <%= f.text_field :supplemental, placeholder: "www reference link or source" %>
+  </div>  
+
+  <div class="field">
+    <%= f.text_field :tag_list, placeholder: "tags (separate w/commas)" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :image, "Upload Attachments" %>
+    <%= f.file_field :image, multiple: true, name: "idea[image]" %>
+  </div>
+
+  <%= f.submit "Post", class: "btn btn-primary btn-large" %>
+
+<% end %>

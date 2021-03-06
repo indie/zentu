@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<HTML>
+<html>
+  <head>
+    <title><%= full_title(yield(:title)) %></title>
+
+    <%= stylesheet_link_tag "application", media: "all" %>
+    <%= filepicker_js_include_tag %>
+    <%= csrf_meta_tags %>
+    <link rel="icon" href="http://www.ecosteader.com/assets/favicon.ico" type="image/x-icon">
+    <link rel="shortcut_icon" href="favicon.ico" type="image/ico" />
+
+    <%= javascript_include_tag "application" %>
+    <%= render 'layouts/shim' %>
+    <%= render 'layouts/ga' %>
+
+  </head>
+
+
+
+  <body>
+    
+    <%= render 'layouts/header' %>
+
+       <div id="signupg">
+       <div class="content">
+         <div class="container-fluid">
+            <% flash.each do |key, value| %>  
+              <div class="alert alert-<%= key %>"><%= value %></div>
+              <% end %>
+            <%= yield %>
+          </div>
+        </div>   
+
+    <%= render 'layouts/footer' %>
+    
+    </div>
+    <%= debug(params) if Rails.env.development? %>
+  </body>
+</html>
+</HTML>

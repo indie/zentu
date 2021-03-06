@@ -1,0 +1,11 @@
+
+<div class="span9">	
+<% nodes.each do |node, children| %>
+	<div class="minitabs"><li> 
+		<%= link_to node.name, node, class: ("active" if @node.root == node) %>
+
+		<%= render 'layouts/submenu_nodes', nodes: children if children.present? %> 
+	</li>
+	<% end %>
+</div>
+</div>

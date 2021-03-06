@@ -1,0 +1,99 @@
+<% provide(:title, 'Parcel Hub') %>
+
+<h2>Parcel Hub</h2>
+
+<% if !signed_in? %>
+    <div class="btn btn-primary"><%= link_to 'Sign In', signin_path %></div> for more info. 
+    <% end %>
+
+
+<div id="go-south">
+<table class="table table-striped">
+   <tr>
+     <th><%#= sort_link @search, :name, "Listing" %>Listing</th>  
+     <th><%#= sort_link @search, :state, "State" %>State</th>  
+     <th><%#= sort_link @search, :acreage, "Acreage" %>Acreage</th>   
+    <% if signed_in? %>
+     <th> Maplink </th>  
+     <th><%#= sort_link @search, :zoning, "Zoning" %>Zoning</th>  
+     <th><%#= sort_link @search, :deed, "Deed" %>Deed</th>  
+     <% end %>
+    <th> Images </th>
+    <th> </th>
+            <% if signed_in? && current_citizen.admin %>
+    <th>Price</th>
+    <th>Admin</th>
+    <th>Admin</th>
+    <% end %>
+
+  </tr>
+<% @parcels.each do |parcel| %>
+  <tr>
+    <td><%= parcel.name %></td><!-- Title of the Listing -->
+    <td><%= parcel.state %></td><!-- State of Parcel -->
+    <td><%= parcel.acreage %></td><!-- Size -->
+
+    <% if signed_in? %>       
+        <td><%= markdown(parcel.maplink) %></td>
+        <td><%= parcel.zoning %></td>
+        <td><%= parcel.deed %></td>
+    <% end %>    
+    <td>
+        <% parcel.attachments.split(",").each do |image_url| %>
+            <div class="thumbnail">
+                <a href="<%= image_url %>">
+                    <img src="<%= image_url %>"></div>
+                </a>
+            </div>
+        <% end %>
+    </td>
+    <td><div class="btn btn-primary"><%= link_to 'More Details', parcel %></td></div>
+
+    <% if signed_in? %>
+    <td> $ <%= parcel.bid_open %></td>
+        <% if signed_in? && current_citizen.admin %>
+        <td><%= link_to 'Edit', edit_parcel_path(parcel) %></td>
+        <td><%= link_to 'Destroy', parcel, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% else %>
+        <td></td>
+        <td></td>
+        <td></td>
+        <% end %>
+    <% end %>
+  </tr>
+<% end %>
+</table>
+</div>
+
+<div class="inst"> Please note that Ecosteader does NOT facilitate in the holding or transfer of funds related to sales / deposit / escrow ... this is swap meet format. </div>
+
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Portlands Greenest Builders -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5682118050471345"
+     data-ad-slot="5029793317"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
+<p>Questions, or to add your ecostead to the list, please <%= link_to 'contact Ecosteader directly', contact_path %>
+
+
+
+<% if signed_in? && current_citizen.admin %>
+    <!-- This is old logic related to paying for advertising for parcels.  Deleting Stripe because Stripe fees are extortionate and evil and suck. -->
+    <% if current_citizen.can_add_parcel!=true %>
+        <% else %>
+        <%= link_to 'New Parcel', new_parcel_path, class: 'btn btn-primary' %>
+        <% end %>
+
+    <% else %>
+ 
+    
+<% end %>
+
+

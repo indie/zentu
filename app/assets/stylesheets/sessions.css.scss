@@ -1,0 +1,75 @@
+// Place all the styles related to the Sessions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+#signupg {
+  /* background-image: url('go-ecostead.jpg'); */
+  /*background-color: #040437; */
+  /*background-position: center top;*
+  /*background-repeat: repeat-y; */
+  /*background-size: cover; */
+  background: url(SAM_0264.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: auto;
+  min-height: 750px;
+  padding-top: 3em;
+    bottom: 400;
+    left: 0;
+    right: 0;
+    opacity: 0.9179;
+    position: absolute;
+    width: 100%;
+      margin-top: 83px;
+       .content {
+          background-color: #fcfcfc;
+          opacity: 0.9323;
+          width: auto;
+          margin-left: 3%;
+          margin-right: 3%;
+          height: auto;
+          margin-top: 5px;
+          padding-top: 7px;
+          min-height: 90%;
+          padding: 25px;
+        }
+}
+
+.paragraph {
+  color: #171614;
+  padding: 3px;
+  margin-bottom: 10px;
+  margin-left: 8px;
+  margin-right: 8px;
+  font-size: 100%; }            
+  
+.blockquote {
+    font-family: 'Roboto Slab', sans-serif;
+    color: #171614;
+    font-size: 0.93em;
+    line-height: 0.87em;
+    padding: 3px;
+    margin-left: 20px;
+    margin-right: 20px;
+    a:link {
+      color: #c48923; 
+      }
+    a:active {
+      color: #c48923;
+      }
+    a:hover {
+    color: #9ABD50; }
+  }
+
+.img-left {
+  padding: 3px;
+  float: left;
+  margin-right: 7px; }
+
+.latest {
+  font-size: 80%;
+  font-family: 'Open Sans', sans-serif;
+  }

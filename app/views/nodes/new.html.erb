@@ -1,0 +1,22 @@
+<% provide(:title, 'Create a New Node') %>
+
+   <div class="span2"></div>
+    <div class="span8">
+		<h2>Green Builder Marketplace</h2>
+
+      <% if current_citizen && current_citizen.admin? %>
+
+          <div class="paragraph">
+          Nodes are categorically-sortable options in the Green Builder Marketplace.  This admin interface allows us to add either a category (parent), or an occurrence (child).  For example, <strong>Bamboo</strong> is a child of <strong>Flooring</strong>.   
+          </div>
+          
+          <%= render 'form' %>
+
+      <% end %>    
+
+			<%= link_to 'Back', nodes_path, :class => 'btn btn-primary btn-small' %>
+
+
+          </div>
+    <div class="span2"></div>
+      

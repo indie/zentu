@@ -1,0 +1,54 @@
+<div class="spacemin">
+  <ul id="nav">
+    <li class="current">  
+      <li><%= link_to "Home", home_path, :title => 'Home' %></li>
+
+      <li><%= link_to "Inspire", ideas_path, :title => 'Ideas feed' %></li>
+
+      <li><%= link_to "Empower", docs_path, :title => 'Contracts, Deeds, Templates' %></li>
+
+      <li><%= link_to "PDX Pages", companies_path, :title => 'Localizing Everything' %></li>
+
+      <li id="menu" class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+             About <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+             <li><%= link_to "Real estate is broken", alternative_path %></li>
+             <li><%= link_to "Lot preparation", lean_path %></li>
+             <li><%= link_to "Free sample documents", docs_path %></li>
+             <li><%= link_to "A bit about zoning", zoning_path %></li>
+             <li><%= link_to "A note regarding taxes",  taxes_path %></li>
+            </ul>
+      </li>
+
+
+      <li><%= link_to "Bookstore", bookstore_path %></li> 
+
+
+        
+            <% if signed_in? %>
+              <li id="menu" class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  Account <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><%= link_to "Your Citizen Profile", current_citizen %></li>
+                  <li><%= link_to "Update Profile", edit_citizen_path(current_citizen) %></li>  
+                  <li><%= link_to "Sign out", signout_path, method: "delete" %></li>
+                 </ul>
+                  <li><%= link_to "Citizens", citizens_path %></li> 
+              </li>
+            <% else %>
+              <li><%= link_to "Sign in", signin_path %></li>
+            <% end %>   
+       </li>
+    </li>
+  </ul>
+</div>
+
+        <div class="logo"><%= link_to image_tag("logo-sm.png", alt: "logo") %></div>
+				
+
+
+
+

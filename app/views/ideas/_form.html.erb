@@ -1,0 +1,30 @@
+<% if signed_in? %>
+
+<%= form_for(@idea) do |f| %>
+
+  <div class="field">
+    <%= f.text_area :content, :class => 'text_field', placeholder: "Add new contribution...", :rows => 7, :cols => 10 %>
+  </div>
+
+   <div class="field">
+    <%= f.text_field :supplemental, :class => 'text_field', placeholder: "link (start with http://)" %>
+  </div>  
+
+  <div class="field">
+    <%= f.text_field :tag_list, :class => 'text_field', placeholder: "tags (separate w/commas)" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :image, "Upload Attachment" %>
+    <%= f.file_field :image %>
+  </div>
+
+  <%= f.submit "Submit", class: "btn btn-large btn-primary" %>
+
+
+<% end %>
+
+
+<% end %>
+
+

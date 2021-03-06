@@ -1,0 +1,18 @@
+
+<% @citizen ||= current_citizen %>
+
+<div class="follower-info">
+
+  <a href="<%= following_citizen_path(@citizen) %>">
+    Following <strong id="following" class="stat">
+      <%= @citizen.followed_citizens.count %>
+    </strong> 
+  </a>
+
+  <a href="<%= followers_citizen_path(@citizen) %>">
+    Followers <strong id="followers" class="stat">
+      <%= @citizen.followers.count %>
+    </strong> 
+  </a>
+
+</div>

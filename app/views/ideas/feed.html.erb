@@ -1,0 +1,16 @@
+    <div class="span2">                         
+        <div id="tag_cloud">
+            <% tag_cloud Idea.tag_counts, %w{t s m l} do |tag, css_class| %>
+            <%= link_to tag.name, tag_path(tag.name), class: css_class %>
+          <% end %>
+        </div>
+    </div>
+
+        
+    <div class="span6">
+      <div class="feed">
+          <div id="global-list">
+            <%= render 'shared/global_feed' %>
+          </div>
+     </div>
+</div>

@@ -1,0 +1,48 @@
+<id="<%= feed_item.id %>">
+
+  <span class="citizen">
+    <%= link_to gravatar_for(feed_item.citizen), feed_item.citizen %>
+    <%= link_to feed_item.citizen.name, feed_item.citizen %>
+  </span>
+
+  
+  
+  <span class="supplemental">
+    <div class="hr-idea">
+        <% if feed_item.image? %>
+          <%= image_tag(feed_item.image) %>
+        <% end %>
+    </div>
+  </span>
+
+  <span class="interesting">
+    <%= markdown(feed_item.content) %>
+  </span>
+
+<div id="appendages">
+    <span>
+      <% if feed_item.supplemental? %>
+      Source <%= link_to image_tag("globe.png", alt: "source", height: "15", width: "15"), url_for(feed_item.supplemental), title: "Source", target: "_blank" %>
+      <% end %>
+    </span>
+
+    <span class="tag"> <%#= feed_item.tags %>
+    Tag(s) <%= raw feed_item.tags.map(&:name).map { |t| link_to t, tag_path(t) }.join(', ') %>
+    </span><br />
+
+    <span class="timestamp">
+       <%#= time_ago_in_words(feed_item.created_at) %> 
+    Added <%= time_ago_in_words(feed_item.created_at) %> ago
+    </span> 
+
+
+    <span class="viewitem">
+    <% if current_citizen?(feed_item.citizen) %>
+        <%= link_to "view or edit", feed_item %>
+             <% else %>
+        <%= link_to "view", feed_item %>
+    <% end %>
+
+    </span>
+  </div>
+</li>

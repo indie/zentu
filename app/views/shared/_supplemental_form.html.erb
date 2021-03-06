@@ -1,0 +1,10 @@
+<h1>Supplementals</h1>
+
+<% @supplementals.each do |supplemental| %>
+  <div class="supplemental">
+    <%= image_tag supplemental.image_url() %>
+  </div>
+<% end %>
+<div class="clear"></div>
+
+<p><%= link_to "New Attachment", new_supplemental_path %></p>
